@@ -81,7 +81,7 @@ export const App = () => {
               }
             />
 
-            <Route path="*" element={<NotFoundPage initPage="/contacts" />} />
+            <Route path="*" element={<NotFoundPage initPage="contacts" />} />
           </Routes>
         </Suspense>
       </main>
