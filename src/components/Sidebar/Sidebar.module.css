@@ -1,0 +1,106 @@
+.sidebar {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 24px;
+  height: 100vh;
+  position: relative;
+  width: 320px;
+  padding-bottom: 48px;
+  /* margin-left: 15px; */
+}
+
+.hide {
+  width: 0;
+}
+
+.sidebarHeader {
+  background: #161d2a;
+  flex-shrink: 0;
+  height: 80px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.button {
+  align-items: center;
+  background-color: #ff6b0a;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  height: 32px;
+  padding: 8px;
+  position: absolute;
+  right: -16px;
+  top: 96px;
+  width: 32px;
+}
+
+.buttonHideMenu {
+  right: -32px;
+}
+
+.button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.logContainer {
+  margin-top: auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.user {
+  align-items: center;
+  display: flex;
+
+  gap: 24px;
+  color: var(--common-black, #010101);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2; /* 200% */
+  letter-spacing: 0.4px;
+}
+
+.user:hover {
+  color: #ff6b0a;
+}
+
+.user svg {
+  fill: #ff6b0a;
+  width: 24px;
+  height: 24px;
+}
+
+.logoutButton {
+  align-items: center;
+  background-color: #ff6b0a;
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  height: 24px;
+  justify-content: center;
+  padding: 5px 10px;
+
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2; /* 200% */
+  letter-spacing: 0.4px;
+  text-align: center;
+  text-transform: uppercase;
+}

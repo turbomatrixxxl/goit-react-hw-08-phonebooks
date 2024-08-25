@@ -6,7 +6,11 @@ import Input from 'components/common/input';
 import Button from 'components/common/button';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact, deleteContact } from '../../redux/operations';
+import {
+  addContact,
+  deleteContact,
+  fetchContacts,
+} from '../../redux/operations';
 import {
   selectContacts,
   selectFilter,
@@ -16,9 +20,10 @@ import {
 import { useDebounce } from '@uidotdev/usehooks';
 import { filterContact } from '../../redux/contacts/contactsSlice';
 
-import styles from './ContactBook.module.css';
 import Loading from 'components/common/Loading';
 import Alert from 'components/common/Alert';
+
+import styles from './ContactBook.module.css';
 
 export default function ContactBook() {
   const [newContact, setNewContact] = useState({
@@ -40,6 +45,10 @@ export default function ContactBook() {
   const isError = useSelector(selectError);
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
 
   useEffect(() => {
     dispatch(filterContact(debouncedSearchTerm));

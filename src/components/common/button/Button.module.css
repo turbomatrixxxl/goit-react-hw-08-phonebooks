@@ -16,7 +16,7 @@
 }
 
 .button:valid {
-  background-color: green;
+  background-color: #ff6b0a;
 }
 
 .delete {

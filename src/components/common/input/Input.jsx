@@ -3,11 +3,21 @@ import PropTypes from 'prop-types';
 
 import styles from './input.module.css';
 
-function Input({ type, name, label, title, pattern, required, handleChange }) {
+function Input({
+  type,
+  name,
+  label,
+  title,
+  pattern,
+  required,
+  handleChange,
+  autoComplete,
+}) {
   return (
     <div className={styles.field}>
       {' '}
       <input
+        autoComplete={autoComplete}
         className={styles.input}
         type={type}
         name={name}
@@ -29,6 +39,7 @@ Input.propTypes = {
   required: PropTypes.bool,
   handleChange: PropTypes.func,
   pattern: PropTypes.string,
+  autoComplete: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
 };
 
 export default Input;
